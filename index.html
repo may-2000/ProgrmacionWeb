@@ -1,0 +1,141 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Tux </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo TransporteX" class="logo">
+        <h1>Transport Tux</h1>
+        <p>Viajes Seguros a Tu Destino</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><button onclick="location.href='#inicio'">Inicio</button></li>
+            <li><button onclick="location.href='#historia'">Historia</button></li>
+            <li><button onclick="location.href='#boletos'">Comprar Boletos</button></li>
+            <li><button onclick="location.href='#sugerencias'">Sugerencias y Quejas</button></li>
+        </ul>
+    </nav>
+
+<section id="inicio">
+  <h2>Bienvenido a Transport Tux</h2>
+  <p>Descubre la mejor manera de viajar a San Juan Bautista Tuxtepec, Oaxaca. Ofrecemos opciones de transporte seguras, cómodas y accesibles. ¡Viaja con estilo!</p>
+  <p>Nuestra ubicación es estratégica, ubicada en el corazón de Oaxaca, lo que nos permite ofrecer servicios de transporte a diferentes partes de la región. Nuestro equipo de profesionales está comprometido con la seguridad y la comodidad de nuestros clientes.</p>
+  <p>En Transport Tux, nos esforzamos por ofrecer una experiencia de viaje inolvidable. Nuestros vehículos están equipados con las últimas tecnologías y nuestros conductores son profesionales experimentados. ¡Viaja con nosotros y descubre la diferencia!</p>
+  <img src="imagen.jpg" alt="Imagen de fondo de Transport Tux" style="width: 100%; height: 200px; object-fit: cover;">
+</section>
+
+  <section id="historia">
+  <h2>Nuestra Historia</h2>
+  <p>En el corazón de Oaxaca, donde las montañas se alzan,<br>
+  Nació la idea de Transport Tux, un sueño que se desbordaba.<br>
+  Un servicio de transporte seguro, cómodo y accesible,<br>
+  Para conectar a la gente con San Juan Bautista Tuxtepec, su destino ideal.</p>
+  <p>Con pasión y dedicación, se trabajó día y noche,<br>
+  Para crear un servicio que fuera más que un simple transporte.<br>
+  Se buscó la calidad, la eficiencia y la atención al cliente,<br>
+  Para que cada viaje fuera una experiencia inolvidable y segura.</p>
+  <p>Ahora, Transport Tux es la opción preferida,<br>
+  Para aquellos que buscan llegar a su destino con estilo y comodidad.<br>
+  Con rutas seguras y profesionales a su servicio,<br>
+  Transport Tux es el compañero ideal para cualquier viaje.</p>
+  <img src="images.jpg" alt="Imagen de la historia de Transport Tux" style="width: 100%; height: 200px; object-fit: cover;">
+  <p>Desde sus inicios, Transport Tux ha estado comprometido con la calidad y la seguridad de sus servicios. Nuestro equipo de profesionales está siempre dispuesto a ayudar a nuestros clientes a encontrar la mejor opción para sus necesidades.</p>
+  <p>Nuestra misión es ser la opción preferida para aquellos que buscan un servicio de transporte confiable y eficiente. Estamos comprometidos con la satisfacción de nuestros clientes y con la seguridad de nuestros pasajeros.</p>
+</section>
+
+<section id="boletos">
+    <h2>Boletos</h2>
+    
+    <div class="transport-options">
+        <div class="transport-option">
+            <img src="autobus.jpg" alt="Autobús">
+            <h3>Autobús</h3>
+            <p>Precio: $100</p>
+        </div>
+        <div class="transport-option">
+            <img src="taxi.jpg" alt="Taxi">
+            <h3>Taxi</h3>
+            <p>Precio: $80</p>
+        </div>
+        <div class="transport-option">
+            <img src="mototaxi.jpg" alt="Mototaxi">
+            <h3>Mototaxi</h3>
+            <p>Precio: $50</p>
+        </div>
+    </div>
+
+    <form action="process.php" method="POST" class="form-boletos">
+        <div class="form-group">
+            <label for="origen">Origen:</label>
+            <select id="origen" name="origen" required>
+                <option value="">Seleccione un origen</option>
+                <option value="Tuxtepec">San Juan Bautista Tuxtepec, Oaxaca</option>
+                <option value="Tuxtepec Centro">Centro de San Juan Bautista Tuxtepec</option>
+                <option value="Tuxtepec Norte">Norte de San Juan Bautista Tuxtepec</option>
+                <option value="Tuxtepec Sur">Sur de San Juan Bautista Tuxtepec</option>
+                <option value="Tuxtepec Oriente">Oriente de San Juan Bautista Tuxtepec</option>
+                <option value="Tuxtepec Poniente">Poniente de San Juan Bautista Tuxtepec</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="destino">Destino:</label>
+            <select id="destino" name="destino" required>
+                <option value="Tuxtepec">Seleccione un Destino</option>
+                <option value="Oaxaca de Juárez">Oaxaca de Juárez, Oaxaca</option>
+                <option value="Puerto Escondido">Puerto Escondido, Oaxaca</option>
+                <option value="Huatulco">Huatulco, Oaxaca</option>
+                <option value="Pinotepa Nacional">Pinotepa Nacional, Oaxaca</option>
+                <option value="Pochutla">Pochutla, Oaxaca</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+        </div>
+
+        <div class="form-group">
+            <label for="transporte">Tipo de Transporte:</label>
+            <select id="transporte" name="transporte" required>
+                <option value="autobus"></option>
+                <option value="autobus">Autobús - $100</option>
+                <option value="taxi">Taxi - $80</option>
+                <option value="mototaxi">Mototaxi - $50</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="cantidad">Cantidad de Boletos:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="0" required>
+        </div>
+
+        <button type="submit">¡Compra tu Boleto Ahora!</button>
+    </form>
+</section>
+    <section id="sugerencias">
+        <h2>Sugerencias y Quejas</h2>
+        <form action="feedback.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy;  Transport Tux 2024.</p>
+    </footer>
+</body>
+</html>
